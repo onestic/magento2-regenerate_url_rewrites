@@ -256,7 +256,7 @@ class RegenerateCategoryRewrites extends AbstractRegenerateRewrites
             ->addAttributeToSelect('url_path')
             // if we need to regenerate Url Rewrites for all categories then we select only top level
             // and all sub-categories (and products) will be regenerated as child's
-            ->addFieldToFilter('level', (count($categoriesFilter) > 0 ? ['gt' => '1'] : 2))
+            //->addFieldToFilter('level', (count($categoriesFilter) > 0 ? ['gt' => '1'] : 2))
             ->setOrder('level', 'ASC')
             // use limit to avoid a "eating" of a memory
             ->setPageSize($this->categoriesCollectionPageSize);
